@@ -24,7 +24,7 @@ namespace FintechAPI.Models
 
         [Required]
         [Column("type")]
-        public bool Type { get; set; } // true == Receipt e false == Expend
+        public bool Type { get; set; } // true is Receipt & false is Expend
 
         [Required]
         [Column("dt_created")]

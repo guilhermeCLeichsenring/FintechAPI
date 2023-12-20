@@ -75,7 +75,7 @@ namespace FintechApi.Controllers
 
 
         [HttpPost]
-        public ActionResult<BankModel> Post([FromBody] CreateBankDto bankDto)
+        private ActionResult<BankModel> Post([FromBody] CreateBankDto bankDto)
         {              
             BankModel model = new BankModel()
             {
@@ -107,7 +107,7 @@ namespace FintechApi.Controllers
 
         
         [HttpPost("postmany")]
-        public ActionResult<IEnumerable<BankModel>> PostMany([FromBody] List<CreateBankDto> banksDto)
+        private ActionResult<IEnumerable<BankModel>> PostMany([FromBody] List<CreateBankDto> banksDto)
         {
             if (!ModelState.IsValid)
             {
@@ -150,7 +150,7 @@ namespace FintechApi.Controllers
     
 
         [HttpDelete("{id:int}")]
-        public ActionResult Delete([FromRoute] int id)
+        private ActionResult Delete([FromRoute] int id)
         {
             try
             {
