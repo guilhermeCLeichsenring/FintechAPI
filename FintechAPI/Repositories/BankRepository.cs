@@ -2,6 +2,7 @@
 using FintechApi.Repositoy.Interfaces;
 using FintechAPI.Context;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Emit;
 
 namespace FintechApi.Repositoy
 {
@@ -28,5 +29,6 @@ namespace FintechApi.Repositoy
 
             return bank;
         }
+
     }
 }

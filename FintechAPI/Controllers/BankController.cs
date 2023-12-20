@@ -4,6 +4,7 @@ using FintechApi.Repositoy;
 using FintechAPI.Context;
 using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace FintechApi.Controllers
 {
@@ -50,30 +51,7 @@ namespace FintechApi.Controllers
             }
         }
 
-        [HttpGet("{id:int}")]
-        public ActionResult<BankModel> GetOne([FromRoute] int id)
-        {
-            var Bank = _bankRepository.GetBankById(id);
-
-            try
-            {
-                if (Bank != null)
-                {
-                    return Ok(Bank);
-                }
-                else
-                {
-                    return NotFound();
-                }
-
-            }
-            catch
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError);
-            }
-        }
-
-
+      
         [HttpPost]
         private ActionResult<BankModel> Post([FromBody] CreateBankDto bankDto)
         {              
@@ -175,7 +153,7 @@ namespace FintechApi.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public ActionResult Put([FromRoute] int id, [FromBody] UpdateBankDto bankDto)
+        private ActionResult Put([FromRoute] int id, [FromBody] UpdateBankDto bankDto)
         {
 
             var model = _bankRepository.GetBankById(id);
