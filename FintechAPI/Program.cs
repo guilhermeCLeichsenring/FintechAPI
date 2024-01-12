@@ -9,7 +9,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-//Conexão com o Banco de Dados
+// Data Base Conection
 var connectionString = builder.Configuration.GetConnectionString("DatabaseConnection");
 builder.Services.AddDbContext<DataBaseContext>(options =>
 {
@@ -18,8 +18,12 @@ builder.Services.AddDbContext<DataBaseContext>(options =>
 
 });
 
-// Injeção de dependência
+// Dependency injection
 builder.Services.AddScoped(typeof(IBaseRepository), typeof(BaseRepository));
+builder.Services.AddScoped(typeof(IBankRepository), typeof(BankRepository));
+builder.Services.AddScoped(typeof(ICategoryRepository), typeof(CategoryRepository));
+builder.Services.AddScoped(typeof(ITransactionRepository), typeof(TransactionRepository));
+builder.Services.AddScoped(typeof(IUserRepository), typeof(UserRepository));
 
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

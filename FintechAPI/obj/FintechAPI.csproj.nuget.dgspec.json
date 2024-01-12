@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\guicl\\Projetos\\Fintech\\FintechAPI\\FintechAPI\\FintechAPI.csproj": {}
+    "C:\\Users\\guicl\\Projetos\\Fintech\\FintechApi\\FintechAPI\\FintechAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\guicl\\Projetos\\Fintech\\FintechAPI\\FintechAPI\\FintechAPI.csproj": {
+    "C:\\Users\\guicl\\Projetos\\Fintech\\FintechApi\\FintechAPI\\FintechAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\guicl\\Projetos\\Fintech\\FintechAPI\\FintechAPI\\FintechAPI.csproj",
+        "projectUniqueName": "C:\\Users\\guicl\\Projetos\\Fintech\\FintechApi\\FintechAPI\\FintechAPI.csproj",
         "projectName": "FintechAPI",
-        "projectPath": "C:\\Users\\guicl\\Projetos\\Fintech\\FintechAPI\\FintechAPI\\FintechAPI.csproj",
+        "projectPath": "C:\\Users\\guicl\\Projetos\\Fintech\\FintechApi\\FintechAPI\\FintechAPI.csproj",
         "packagesPath": "C:\\Users\\guicl\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\guicl\\Projetos\\Fintech\\FintechAPI\\FintechAPI\\obj\\",
+        "outputPath": "C:\\Users\\guicl\\Projetos\\Fintech\\FintechApi\\FintechAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\guicl\\AppData\\Roaming\\NuGet\\NuGet.Config",

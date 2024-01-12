@@ -31,7 +31,6 @@ namespace FintechApi.Controllers
         {
 
             var users = _userRepository.GetAllUsers();
-            //.Select(p => p.AsDto());
 
             try
             {

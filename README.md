@@ -1,58 +1,59 @@
 # FintechAPI
+
 It's a web application, created to perform a CRUD of financial transactions by WEB API in json
 
 ## Models used in the application
 
 TransactionModel:
 
-* Id
-* Value
-* Description
-* Type (boolean wich true is Receipt & false is Expend)
-* Created (DateTime)
-* UserId  
-* CategoryId
-* BanckId
+- Id
+- Value
+- Description
+- Type (boolean wich true is Receipt & false is Expend)
+- Created (DateTime)
+- UserId
+- CategoryId
+- BanckId
 
-UserModel: 
+UserModel:
 
-* Id
-* Name
-* Email
-* Password
-* PhoneNumber
-* Created (DateTime)
-* List of Categorys 
-* List of Transactions
+- Id
+- Name
+- Email
+- Password
+- PhoneNumber
+- Created (DateTime)
+- List of Categorys
+- List of Transactions
 
-CategoryModel: 
+CategoryModel:
 
-* Id
-* Name
-* Type (boolean wich true is Receipt & false is Expend)
-* Created (DateTime)
-* UserId
+- Id
+- Name
+- Type (boolean wich true is Receipt & false is Expend)
+- Created (DateTime)
+- UserId
 
 BankModel:
 
-* Id
-* Value 
-* Label
+- Id
+- Value
+- Label
 
 Obs: The Bank is the only entity that the methods Put, Delete and Post are private in BanckControl, these methods were just used to add the already added Banck's objects.
 
-
 ## In addition to CRUD, the Transaction has other features:
 
-* Sum all receipts;
-* Sum all expends;
-* Sum the total user's amount.
+- Sum all receipts;
+- Sum all expends;
+- Sum the total user's amount.
 
 ## The features currently in development:
 
-* Find existing emails;
-* Password Cryptography;
-* Recover Password.
+- Find existing emails;
+- Password Cryptography;
+- Recover Password;
+- Tests.
 
 ## Technologies used:
 
@@ -69,7 +70,7 @@ Obs: The Bank is the only entity that the methods Put, Delete and Post are priva
 </tr>
 </table>
 
-## Libraries used: 
+## Libraries used:
 
 <table>
 <tr>
@@ -90,11 +91,10 @@ Obs: The Bank is the only entity that the methods Put, Delete and Post are priva
 
 ## Steps to add the transaction using the Swagger:
 
-1) Run the application to open the Swagger interface;
-2) Add user with the Post method;
-3) Add category (use the userId to insert the object);
-4) Add transaction (insert the userId, the categoryId, and the bankId to add the object);
-5) Finished. It's possible to see all the entities and use the operations methods using the Get methods, you just need to insert the respective userId.
+1. Run the application to open the Swagger interface;
+2. Add user with the Post method;
+3. Add category (use the userId to insert the object);
+4. Add transaction (insert the userId, the categoryId, and the bankId to add the object);
+5. Finished. It's possible to see all the entities and use the operations methods using the Get methods, you just need to insert the respective userId.
 
 Obs: In the front-end application you won't need to insert the userId manually, it'll be inserted automatically after the user sign in.
-

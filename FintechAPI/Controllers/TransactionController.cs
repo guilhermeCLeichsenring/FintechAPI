@@ -30,7 +30,6 @@ namespace FintechAPI.Controllers
         {
 
             var transactions = _transactionRepository.GetAllTransactionsByUserId(userId);
-            //.Select(p => p.AsDto());
 
             try
             {
@@ -56,7 +55,6 @@ namespace FintechAPI.Controllers
         {
 
             var transactions = _transactionRepository.GetTransactionsByIdCategory(categoryId);
-            //.Select(p => p.AsDto());
 
             try
             {
@@ -106,7 +104,6 @@ namespace FintechAPI.Controllers
         {
 
             var transactions = _transactionRepository.GetAllReceipts(userId);
-            //.Select(p => p.AsDto());
 
             try
             {
@@ -132,7 +129,6 @@ namespace FintechAPI.Controllers
         {
 
             var transactions = _transactionRepository.GetAllExpends(userId);
-            //.Select(p => p.AsDto());
 
             try
             {
@@ -276,7 +272,6 @@ namespace FintechAPI.Controllers
             var model = _transactionRepository.GetTransactionById(id);
 
 
-
             if (!ModelState.IsValid)
             {
                 return BadRequest();
@@ -288,6 +283,8 @@ namespace FintechAPI.Controllers
 
             model.Value = transactionDto.Value;
             model.Description = transactionDto.Description;
+            model.BankId = transactionDto.BankId;
+            model.CategoryId = transactionDto.CategoryId;
 
             try
             {
@@ -301,8 +298,6 @@ namespace FintechAPI.Controllers
             {
                 return BadRequest(new { message = $"Can't update this Transaction. More details: {error.Message}" });
             }
-
-
 
         }
 
@@ -361,5 +356,9 @@ namespace FintechAPI.Controllers
             return Ok(result);
         }
 
+        public object PostCategoryReceipt(object createCategoryDto)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

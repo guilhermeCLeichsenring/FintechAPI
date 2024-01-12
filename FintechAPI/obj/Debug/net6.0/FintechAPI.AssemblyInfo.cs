@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FintechAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+38d476ae67808165dc6b6310a0ef271e781f0efd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+186718a5f8b7e8ecda296fe977330a134b885b5c")]
 [assembly: System.Reflection.AssemblyProductAttribute("FintechAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FintechAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

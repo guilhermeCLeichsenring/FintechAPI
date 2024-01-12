@@ -12,8 +12,7 @@ namespace FintechApi.Repositoy
         
         public BaseRepository(DataBaseContext context)
         {
-            _dbContext = context;
-            //_dbSet = context.Set<T>();
+            _dbContext = context;            
         }
 
         public void Add<T>(T model) where T : class

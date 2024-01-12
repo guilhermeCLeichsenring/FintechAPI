@@ -29,11 +29,10 @@ namespace FintechApi.Controllers
         {
             
             var banks = _bankRepository.GetAllBanks();
-                //.Select(p => p.AsDto());
+                
 
             try
-            {
-                //var banks = _dbContext.Banks.ToList();
+            {              
 
                 if (banks != null)
                 {
@@ -46,6 +45,27 @@ namespace FintechApi.Controllers
 
             }
             catch 
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError);
+            }
+        }
+
+        public ActionResult<BankModel> GetOne(int id)
+        {
+            var bank = _bankRepository.GetBankById(id);
+
+            try
+            {
+                if(bank != null)
+                {
+                    return Ok(bank);
+                }
+                else 
+                {
+                    return NotFound(); 
+                }
+            }
+            catch
             {
                 return StatusCode(StatusCodes.Status500InternalServerError);
             }
