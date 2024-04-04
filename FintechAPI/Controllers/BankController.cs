@@ -24,7 +24,7 @@ namespace FintechApi.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("getall")]
         public ActionResult<IList<BankModel>> GetAll()
         {
             
@@ -50,6 +50,7 @@ namespace FintechApi.Controllers
             }
         }
 
+        [HttpGet("{id:int}")]
         public ActionResult<BankModel> GetOne(int id)
         {
             var bank = _bankRepository.GetBankById(id);

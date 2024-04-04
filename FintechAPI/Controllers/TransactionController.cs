@@ -151,7 +151,7 @@ namespace FintechAPI.Controllers
         
 
         [HttpPost("receipt")]
-        public async Task<IActionResult> PostReceipt([FromBody] CreateTransactionDto transactionDto)
+        public ActionResult<TransactionModel> PostReceipt([FromBody] CreateTransactionDto transactionDto)
         {
 
             UserModel? userModel = _dbContext.Users.Find(transactionDto.UserId);
@@ -356,9 +356,5 @@ namespace FintechAPI.Controllers
             return Ok(result);
         }
 
-        public object PostCategoryReceipt(object createCategoryDto)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
